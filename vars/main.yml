@@ -1,0 +1,9 @@
+---
+# vars file for prometheus-installer
+prometheus_installer_name: '{{prometheus_installer_appname}}-{{prometheus_installer_version}}.{{prometheus_installer_platform}}'
+
+prometheus_installer_tgz: '{{prometheus_installer_name}}.tar.gz'
+prometheus_installer_tgz_url: '{{prometheus_installer_mirror}}/{{prometheus_installer_appname}}/releases/download/v{{prometheus_installer_version}}/{{prometheus_installer_tgz}}'
+
+prometheus_installer_dir: '{{prometheus_installer_parent_dir}}/{{prometheus_installer_name}}'
+prometheus_installer_link_dir: '{{prometheus_installer_parent_dir}}/{{prometheus_installer_appname}}'

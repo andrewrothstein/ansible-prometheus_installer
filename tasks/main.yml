@@ -1,0 +1,33 @@
+---
+- name: download....
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{prometheus_installer_tgz_url}}'
+    dest: /tmp/{{prometheus_installer_tgz}}
+    mode: 0644
+
+- name: unarchive...
+  become: yes
+  become_user: root
+  unarchive:
+    copy: no
+    src: /tmp/{{prometheus_installer_tgz}}
+    dest: '{{prometheus_installer_parent_dir}}'
+    creates: '{{prometheus_installer_dir}}'
+
+- name: linking...
+  become: yes
+  become_user: root
+  file:
+    src: '{{prometheus_installer_dir}}'
+    dest: '{{prometheus_installer_link_dir}}'
+    state: link
+
+- name: add to default path...
+  become: yes
+  become_user: root
+  template:
+    src: shell.j2
+    dest: /etc/profile.d/{{prometheus_installer_appname}}.sh
+    mode: 0644
