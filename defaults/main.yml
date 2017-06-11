@@ -1,16 +1,17 @@
 ---
 # defaults file for prometheus-installer
-prometheus_installer_appname: prometheus
-prometheus_installer_version: '1.7.0'
-prometheus_installer_platform: linux-amd64
+prometheus_installer_parent_dir: /usr/local
 
 prometheus_installer_mirror: https://github.com/prometheus
+prometheus_installer_platform: linux-amd64
 
-# see https://prometheus.io/download/
-prometheus_installer_checksums:
-  darwin-amd64: sha256:ac52d41f72d1e5c6abaa8e1f51cb050920a8a26930f3333b0066170cce842c76
-  linux-amd64: sha256:96bebf4fbebbaf9d39dbe76787374e7e9cae21b903394cd7a4e3c7790cec7a9a
-  windows-amd64: sha256:99d390645fc1abbc36aaa7837852e8380fb0bf1559a3b18a92120d80e015e0e3
-
-prometheus_installer_parent_dir: /usr/local
+# example for prometheus itself....
+#prometheus_installer_appname: prometheus
+#prometheus_installer_version: '1.7.0'
+#
+## see https://prometheus.io/download/
+#prometheus_installer_checksums:
+#  darwin-amd64: sha256:ac52d41f72d1e5c6abaa8e1f51cb050920a8a26930f3333b0066170cce842c76
+#  linux-amd64: sha256:96bebf4fbebbaf9d39dbe76787374e7e9cae21b903394cd7a4e3c7790cec7a9a
+#  windows-amd64: sha256:99d390645fc1abbc36aaa7837852e8380fb0bf1559a3b18a92120d80e015e0e3
   

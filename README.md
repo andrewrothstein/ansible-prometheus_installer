@@ -1,8 +1,8 @@
-andrewrothstein.rolename
+andrewrothstein.prometheus-installer
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-rolename.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-rolename)
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-prometheus-installer.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-prometheus-installer)
 
-A brief description of the andrewrothstein.rolename goes here.
+A base role for installing [Prometheus](https://prometheus.io/download/) related apps.
 
 Requirements
 ------------
@@ -25,7 +25,7 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - andrewrothstein.rolename
+    - andrewrothstein.prometheus-installer
 ```
 
 License

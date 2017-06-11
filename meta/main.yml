@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: '@TODO name this role'
+  description: base role for installing prometheus related tooling
   company: PointState Capital
   license:
     - MIT
