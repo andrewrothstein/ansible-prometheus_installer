@@ -11,7 +11,7 @@
   become: yes
   become_user: root
   unarchive:
-    remote_src: no
+    remote_src: yes
     src: /tmp/{{prometheus_installer_tgz}}
     dest: '{{prometheus_installer_parent_dir}}'
     creates: '{{prometheus_installer_dir}}'
