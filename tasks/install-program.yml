@@ -6,9 +6,9 @@
   become: yes
   become_user: root
   get_url:
-    url: '{{prometheus_installer_tgz_url}}'
-    dest: /tmp/{{prometheus_installer_tgz}}
-    checksum: '{{prometheus_installer_checksum}}'
+    url: '{{ prometheus_installer_tgz_url }}'
+    dest: /tmp/{{ prometheus_installer_tgz }}
+    checksum: '{{ prometheus_installer_checksum }}'
     mode: 0644
 
 - name: unarchive...
@@ -16,16 +16,16 @@
   become_user: root
   unarchive:
     remote_src: yes
-    src: /tmp/{{prometheus_installer_tgz}}
-    dest: '{{prometheus_installer_parent_dir}}'
-    creates: '{{prometheus_installer_dir}}'
+    src: /tmp/{{ prometheus_installer_tgz }}
+    dest: '{{ prometheus_installer_parent_dir }}'
+    creates: '{{ prometheus_installer_dir }}'
 
 - name: linking...
   become: yes
   become_user: root
   file:
-    src: '{{prometheus_installer_dir}}'
-    dest: '{{prometheus_installer_link_dir}}'
+    src: '{{ prometheus_installer_dir }}'
+    dest: '{{ prometheus_installer_link_dir }}'
     state: link
 
 - name: add to default path...
@@ -33,5 +33,5 @@
   become_user: root
   template:
     src: shell.j2
-    dest: /etc/profile.d/{{prometheus_installer_app.name}}.sh
+    dest: /etc/profile.d/{{ prometheus_installer_app.name }}.sh
     mode: 0644
