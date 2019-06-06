@@ -5,13 +5,82 @@ prometheus_installer_parent_dir: /usr/local
 prometheus_installer_mirror: https://github.com/prometheus
 prometheus_installer_platform: linux-amd64
 
-# example for prometheus itself....
-#prometheus_installer_appname: prometheus
-#prometheus_installer_version: '1.7.0'
-#
-## see https://prometheus.io/download/
-#prometheus_installer_checksums:
-#  darwin-amd64: sha256:ac52d41f72d1e5c6abaa8e1f51cb050920a8a26930f3333b0066170cce842c76
-#  linux-amd64: sha256:96bebf4fbebbaf9d39dbe76787374e7e9cae21b903394cd7a4e3c7790cec7a9a
-#  windows-amd64: sha256:99d390645fc1abbc36aaa7837852e8380fb0bf1559a3b18a92120d80e015e0e3
-  
+prometheus_installer_versions:
+  - name: prometheus
+    version: '2.10.0'
+  - name: alertmanager
+    version: '0.17.0'
+  - name: blackbox_exporter
+    version: '0.14.0'
+  - name: consul_exporter
+    version: '0.4.0'
+  - name: graphite_exporter
+    version: '0.6.2'
+  - name: haproxy_exporter
+    version: '0.10.0'
+  - name: memcached_exporter
+    version: '0.5.0'
+  - name: mysqld_exporter
+    version: '0.11.0'
+  - name: node_exporter
+    version: '0.18.1'
+  - name: pushgateway
+    version: '0.8.0'
+  - name: statsd_exporter
+    version: '0.10.5'
+
+prometheus_installer_checksums:
+  prometheus:
+    '2.10.0':
+      darwin-amd64:  sha256:740e36bcacc0c5d4495f5341fcfa8b7e0dc623d12e8b07ac291052ea0a681325
+      linux-amd64:   sha256:f4233783826f18606b79e5cef0686e4a9c2030146a3c7ce134f0add09f5adcb7
+      windows-amd64: sha256:eb138082a4d5e4d5b1e3ca838fa508f053474d46bca76e87ab0834f0d8b110db
+  alertmanager:
+    '0.17.0':
+      darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
+      linux-amd64:   sha256:7c8d2cfeb021c80881ae9904d959131091b8785b6fda9800f84ddef148fe0a4f
+      windows-amd64: sha256:512dbed02a3cc7e3f06d737f56179e458c462762b3427063b89c62a54d9645c6
+  blackbox_exporter:
+    '0.14.0':
+      darwin-amd64:  sha256:a371d0496adb5d62368d6606928c5effd318d1387f6b9a9998f8d0333492645a
+      linux-amd64:   sha256:a2918a059023045cafb911272c88a9eb83cdac9a8a5e8e74844b5d6d27f19117
+      windows-amd64: sha256:21ea148870631310002cbd48be54ca45e8d300da5a902b0aec052f1a64316d93
+  consul_exporter:
+    '0.4.0':
+      darwin-amd64:  sha256:75641783938967c11c18d6d340028ff2dce7ad0ae5e300fa631b813cc6ea9647
+      linux-amd64:   sha256:ff77c03de67cf381f67480b5be6699901785a34145c518c3484ae3e5b8440d08
+      windows-amd64: sha256:54579bc5dfa6a238e310a1874b0a362027661dfa1754535e74610dc8ef6163b1
+  graphite_exporter:
+    '0.6.2':
+      darwin-amd64:  sha256:f9c0aa745502c0ab01fdcca29181801810202e0aed512a9aa9a37bb4be88a919
+      linux-amd64:   sha256:9b962bd06406ece4a865ad6947a6e652e48a92a0d77e496a0351c04e9c2c5e9e
+      windows-amd64: sha256:f83fad71bad99ccac145d65f82bf9d17fa37168a5dcce6415c6350e79a84e638
+  haproxy_exporter:
+    '0.10.0':
+      darwin-amd64:  sha256:8fdb8bb182586c57e5892816a02846bae0998916765d22bb81b2c444a3565862
+      linux-amd64:   sha256:08150728e281f813a8fcfff4b336f16dbfe4268a1c7510212c8cff2579b10468
+      windows-amd64: sha256:044118feb98b74eb921e27bd4b511732b553896c672c19bdd3418445dc030794
+  memcached_exporter:
+    '0.5.0':
+      darwin-amd64:  sha256:e10685cca5ffd8a3a7574b3dc096dc7418f34906abd399f881be06dd38be62cb
+      linux-amd64:   sha256:bb07f496ceb63dad9793ad4295205547a4bd20b90628476d64fa96c9a25a020f
+      windows-amd64: sha256:9e83c00c9d249c942f65b6a48112e6bd6e28a3d15b8a1d35e935621657b3d837
+  mysqld_exporter:
+    '0.11.0':
+      darwin-amd64:  sha256:8e0a7d8847790d6dcdcf392e6dd227458a7bcaa1e0890cc6326fdf956421f2a7
+      linux-amd64:   sha256:b53ad48ff14aa891eb6a959730ffc626db98160d140d9a66377394714c563acf
+      windows-amd64: sha256:38605ae648f8def07a0f412d81a30a6c48c0d20a6981468d25b91c8aa529e599
+  node_exporter:
+    '0.18.1':
+      darwin-amd64: sha256:20fadb3108de0a9cc70a1333394e5be90416b4f91025f9fc66f5736335e94398
+      linux-amd64:  sha256:b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424
+  pushgateway:
+    '0.8.0':
+      darwin-amd64:  sha256:25399a4c6600c1931f9d9bd5294700c2b53f964188b1c6003f9d12a2e176aac1
+      linux-amd64:   sha256:6949866ba9ad0cb88d3faffd4281f17df79281398b4dbd0ec3aab300071681ca
+      windows-amd64: sha256:506b555e7a13cabf3d85ec0dbe1bc6bc3a2444c0cc468baa8d31e7fc2fe18dd1
+  statsd_exporter:
+    '0.10.5':
+      darwin-amd64:  sha256:b01ae33abacff6df17de1f3f110b1aa400e4ac148e437b62b639fd4c640e25bd
+      linux-amd64:   sha256:714ef88ee655d8bceaf2ff41bdab1bda4eba514cf70e5257d092077a4613f1c3
+      windows-amd64: sha256:f3fdd8699902519dbc092138847e98e9cf24b6b3382440350ba8f76dbda2a336
