@@ -1,26 +1,43 @@
 ---
-- name: resolving vars...
+- name: resolving vars for {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version}}
   include_vars:
     file: install-vars.yml
-- name: download....
-  become: yes
-  become_user: root
-  get_url:
-    url: '{{ prometheus_installer_tgz_url }}'
-    dest: /tmp/{{ prometheus_installer_tgz }}
-    checksum: '{{ prometheus_installer_checksum }}'
-    mode: 0644
 
-- name: unarchive...
-  become: yes
-  become_user: root
-  unarchive:
-    remote_src: yes
-    src: /tmp/{{ prometheus_installer_tgz }}
-    dest: '{{ prometheus_installer_parent_dir }}'
-    creates: '{{ prometheus_installer_dir }}'
+- name: check for installation of {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version}}
+  become: root
+  stat:
+    path: '{{ prometheus_installer_dir }}'
+  changed_when: false
+  register: prometheus_installer_binary
 
-- name: linking...
+- when: not prometheus_installer_binary.stat.exists
+  block:
+    - name: downloading {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version}}
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ prometheus_installer_tgz_url }}'
+        dest: /tmp/{{ prometheus_installer_tgz }}
+        checksum: '{{ prometheus_installer_checksum }}'
+        mode: 0644
+
+    - name: unarchiving {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version}}
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ prometheus_installer_tgz }}
+        dest: '{{ prometheus_installer_parent_dir }}'
+        creates: '{{ prometheus_installer_dir }}'
+  always:
+    - name: deleting archive for {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version}}
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ prometheus_installer_tgz }}
+        state: absent
+
+- name: linking {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version}}
   become: yes
   become_user: root
   file:
@@ -28,7 +45,7 @@
     dest: '{{ prometheus_installer_link_dir }}'
     state: link
 
-- name: add to default path...
+- name: adding {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version}} to default path...
   become: yes
   become_user: root
   template:
