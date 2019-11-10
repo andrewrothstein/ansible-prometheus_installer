@@ -45,5 +45,5 @@ dlapp haproxy_exporter 0.10.0
 dlapp memcached_exporter 0.6.0
 dlapp mysqld_exporter 0.12.1
 dlapp node_exporter 0.18.1
-dlapp push_gateway 1.0.0
+dlapp pushgateway 1.0.0
 dlapp statsd_exporter 0.12.2
