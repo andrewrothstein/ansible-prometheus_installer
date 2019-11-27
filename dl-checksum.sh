@@ -7,43 +7,43 @@ MIRROR=https://github.com/prometheus
 
 dl()
 {
-    APP=$1
-    VER=$2
-    OS=$3
-    ARCH=$4
-    FILE=${APP}-${VER}.${OS}-${ARCH}.tar.gz
-    URL=$MIRROR/$APP/releases/download/v${VER}/$FILE
-    LFILE=$DIR/$FILE
+    local app=$1
+    local ver=$2
+    local os=$3
+    local arch=$4
+    local file=${app}-${ver}.${os}-${arch}.tar.gz
+    local url=$MIRROR/$app/releases/download/v${ver}/$file
+    local lfile=$DIR/$file
 
-    if [ ! -e $LFILE ];
+    if [ ! -e $lfile ];
     then
-        wget -q -O $LFILE $URL
+        wget -q -O $lfile $url
     fi
 
-    printf "      # %s\n" $URL
-    printf "      %s-%s: sha256:%s\n" $OS $ARCH `sha256sum $LFILE | awk '{print $1}'`
+    printf "      # %s\n" $url
+    printf "      %s-%s: sha256:%s\n" $os $arch `sha256sum $lfile | awk '{print $1}'`
 }
 
 dlapp()
 {
-    APP=$1
-    VER=$2
-    printf "  %s:\n" $APP
-    printf "    '%s':\n" $VER
+    local app=$1
+    local ver=$2
+    printf "  %s:\n" $app
+    printf "    '%s':\n" $ver
     for os in darwin linux windows
     do
-        dl $APP $VER $os amd64
+        dl $app $ver $os amd64
     done
 }
 
-dlapp prometheus 2.13.1
-dlapp alertmanager 0.19.0
-dlapp blackbox_exporter 0.15.1
-dlapp consul_exporter 0.5.0
-dlapp graphite_exporter 0.6.2
-dlapp haproxy_exporter 0.10.0
-dlapp memcached_exporter 0.6.0
-dlapp mysqld_exporter 0.12.1
-dlapp node_exporter 0.18.1
-dlapp pushgateway 1.0.0
-dlapp statsd_exporter 0.12.2
+dlapp prometheus 2.14.0
+#dlapp alertmanager 0.19.0
+dlapp blackbox_exporter 0.16.0
+#dlapp consul_exporter 0.5.0
+#dlapp graphite_exporter 0.6.2
+#dlapp haproxy_exporter 0.10.0
+#dlapp memcached_exporter 0.6.0
+#dlapp mysqld_exporter 0.12.1
+#dlapp node_exporter 0.18.1
+#dlapp pushgateway 1.0.0
+#dlapp statsd_exporter 0.12.2
