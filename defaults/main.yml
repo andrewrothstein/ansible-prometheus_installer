@@ -7,13 +7,13 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: '2.14.0'
+    version: '2.15.1'
   - name: alertmanager
-    version: '0.19.0'
+    version: '0.20.0'
   - name: blackbox_exporter
     version: '0.16.0'
   - name: consul_exporter
-    version: '0.5.0'
+    version: '0.6.0'
   - name: graphite_exporter
     version: '0.6.2'
   - name: haproxy_exporter
@@ -25,9 +25,9 @@ prometheus_installer_versions:
   - name: node_exporter
     version: '0.18.1'
   - name: pushgateway
-    version: '1.0.0'
+    version: '1.0.1'
   - name: statsd_exporter
-    version: '0.12.2'
+    version: '0.13.0'
 
 prometheus_installer_checksums:
   prometheus:
@@ -56,6 +56,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:ddf47223ec716594254df110ee26ad52e66d7d4471ae8edbf9020087396861e5
       # https://github.com/prometheus/prometheus/releases/download/v2.14.0/prometheus-2.14.0.windows-amd64.tar.gz
       windows-amd64: sha256:0180f767df0a3a855b98e3e3f6600c35af4486cc07d7f5f26b31e203f8a9a249
+    '2.15.1':
+      # https://github.com/prometheus/prometheus/releases/download/v2.15.1/prometheus-2.15.1.darwin-amd64.tar.gz
+      darwin-amd64: sha256:7345d80de8107d2497785f99e6a265185ff693f8fa69a60efa6dcc3689cde5bc
+      # https://github.com/prometheus/prometheus/releases/download/v2.15.1/prometheus-2.15.1.linux-amd64.tar.gz
+      linux-amd64: sha256:f8d2b9e8f9551a3dd6f476a43ea9f699d18d2cc6558baf0eebe0143d8f9c1d5a
+      # https://github.com/prometheus/prometheus/releases/download/v2.15.1/prometheus-2.15.1.windows-amd64.tar.gz
+      windows-amd64: sha256:212a19698996aa90c1005b4afedb182fb5942615f99629d0458a49b2e4411a81
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -75,6 +82,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:6191788f8b91a05955fcdc2ab4bc7d0edf70e5039f3acffb284d75745cc80d67
       # https://github.com/prometheus/alertmanager/releases/download/v0.19.0/alertmanager-0.19.0.windows-amd64.tar.gz
       windows-amd64: sha256:87cd6313c0d04841954f5c40b13eab63a3d26d91041d0f6cfaa76e1b2c92a0ef
+    '0.20.0':
+      # https://github.com/prometheus/alertmanager/releases/download/v0.20.0/alertmanager-0.20.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:5134585c6200856ca70f61502a460413f6a0e6c848e7156724e5d568f77aba56
+      # https://github.com/prometheus/alertmanager/releases/download/v0.20.0/alertmanager-0.20.0.linux-amd64.tar.gz
+      linux-amd64: sha256:3a826321ee90a5071abf7ba199ac86f77887b7a4daa8761400310b4191ab2819
+      # https://github.com/prometheus/alertmanager/releases/download/v0.20.0/alertmanager-0.20.0.windows-amd64.tar.gz
+      windows-amd64: sha256:5887902bea633d8b3396804760308acc0a2631b7ca85df75d8c526cd1985d62b
   blackbox_exporter:
     '0.14.0':
       darwin-amd64:  sha256:a371d0496adb5d62368d6606928c5effd318d1387f6b9a9998f8d0333492645a
@@ -106,6 +120,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:4592b3e0e1b1f1ed18bd2a95a19016feb081bb0eb304d6e48cbbae030aee7805
       # https://github.com/prometheus/consul_exporter/releases/download/v0.5.0/consul_exporter-0.5.0.windows-amd64.tar.gz
       windows-amd64: sha256:16975b105839bde4fcfa3bbd65d81003fd6c822ea52e6bcc10fae8febd06ce09
+    '0.6.0':
+      # https://github.com/prometheus/consul_exporter/releases/download/v0.6.0/consul_exporter-0.6.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:530a48bec79e9ccd6fce69ff1b7f78c587ebea2d93561324f5987388056c5295
+      # https://github.com/prometheus/consul_exporter/releases/download/v0.6.0/consul_exporter-0.6.0.linux-amd64.tar.gz
+      linux-amd64: sha256:70770e54cfdd0997f3031357ce0f45bbe16e7d1b44fc3a0771b192c5bfe1af10
+      # https://github.com/prometheus/consul_exporter/releases/download/v0.6.0/consul_exporter-0.6.0.windows-amd64.tar.gz
+      windows-amd64: sha256:bc02445740746948eccc8c2f6646337c6733e60bb418c71f83aac3148758a6b6
   graphite_exporter:
     '0.6.2':
       darwin-amd64:  sha256:f9c0aa745502c0ab01fdcca29181801810202e0aed512a9aa9a37bb4be88a919
@@ -163,6 +184,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:5dc6472806ba143b9b6b54f79e5362db3b517acf92e524923fcaf4f184908505
       # https://github.com/prometheus/pushgateway/releases/download/v1.0.0/pushgateway-1.0.0.windows-amd64.tar.gz
       windows-amd64: sha256:a90e028a37dcc2ecc2775c097857d216f6c42045f2f92d888d8a2d53c3b4448b
+    '1.0.1':
+      # https://github.com/prometheus/pushgateway/releases/download/v1.0.1/pushgateway-1.0.1.darwin-amd64.tar.gz
+      darwin-amd64: sha256:462988308b07af7d8a68c91e4ad3d6677568d8cf51e70bcb20ba1c688eed3228
+      # https://github.com/prometheus/pushgateway/releases/download/v1.0.1/pushgateway-1.0.1.linux-amd64.tar.gz
+      linux-amd64: sha256:b81b45bd1c9de86cf17531932b414cc65051102eb82d3e6bc5cef16ed703ce83
+      # https://github.com/prometheus/pushgateway/releases/download/v1.0.1/pushgateway-1.0.1.windows-amd64.tar.gz
+      windows-amd64: sha256:1aa529e0c41e3ed60ce84a18342ab640313fe109577c40015b4e20e5c098a516
   statsd_exporter:
     '0.10.5':
       darwin-amd64:  sha256:b01ae33abacff6df17de1f3f110b1aa400e4ac148e437b62b639fd4c640e25bd
@@ -182,3 +210,10 @@ prometheus_installer_checksums:
       linux-amd64: sha256:9976810ae7a0e3593d6727d46d8c45a23f534e5794de816ed8309a42bb86cb34
       # https://github.com/prometheus/statsd_exporter/releases/download/v0.12.2/statsd_exporter-0.12.2.windows-amd64.tar.gz
       windows-amd64: sha256:d839beb0d8610d2535f82703b5b1ceea7ec0a2e43f625dd9f37139591e03da5d
+    '0.13.0':
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.13.0/statsd_exporter-0.13.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:3e4663f1b9130465732c613916e468e7500b4cbe375ba3111c58c49f3016109d
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.13.0/statsd_exporter-0.13.0.linux-amd64.tar.gz
+      linux-amd64: sha256:4685fcefa770b5643a58687e9fc3b311716ae915136dda8cc5c9b5a4fbe0e964
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.13.0/statsd_exporter-0.13.0.windows-amd64.tar.gz
+      windows-amd64: sha256:5524d8fb0d6232a3d6faa6a0b171ba72b737b02fe5000f0eb8b8a90b308b207e
