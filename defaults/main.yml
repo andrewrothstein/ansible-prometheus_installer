@@ -7,11 +7,11 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: '2.19.0'
+    version: '2.19.1'
   - name: alertmanager
     version: '0.21.0'
   - name: blackbox_exporter
-    version: '0.16.0'
+    version: '0.17.0'
   - name: consul_exporter
     version: '0.7.0'
   - name: graphite_exporter
@@ -27,7 +27,7 @@ prometheus_installer_versions:
   - name: pushgateway
     version: '1.2.0'
   - name: statsd_exporter
-    version: '0.15.0'
+    version: '0.16.0'
 
 prometheus_installer_checksums:
   prometheus:
@@ -98,6 +98,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:447cf576cf1796b54daa14f5017100611392d0f7ecbc029163abed2ffc8a41fa
       # https://github.com/prometheus/prometheus/releases/download/v2.19.0/prometheus-2.19.0.windows-amd64.tar.gz
       windows-amd64: sha256:5b025ff46e7335edb8cdd1f32bcc16f9d63f6e38723eb5ed4b17cec76248cb3d
+    '2.19.1':
+      # https://github.com/prometheus/prometheus/releases/download/v2.19.1/prometheus-2.19.1.darwin-amd64.tar.gz
+      darwin-amd64: sha256:58a5c26b8f73170c0e506a573827bf77631ccefdb49733fdc9a4ae9f369a4fca
+      # https://github.com/prometheus/prometheus/releases/download/v2.19.1/prometheus-2.19.1.linux-amd64.tar.gz
+      linux-amd64: sha256:c341566bcf1d645b0561e1296bf18b694a283dd83a304f14a288aa284fc2019a
+      # https://github.com/prometheus/prometheus/releases/download/v2.19.1/prometheus-2.19.1.windows-amd64.tar.gz
+      windows-amd64: sha256:3b3d785b44f3e9d74b92c561b5b4862c3f99b4ea0291ba9ecf954104f6ec0719
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -150,6 +157,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:52d3444a518ea01f220e08eaa53eb717ef54da6724760c925ab41285d0d5a7bd
       # https://github.com/prometheus/blackbox_exporter/releases/download/v0.16.0/blackbox_exporter-0.16.0.windows-amd64.tar.gz
       windows-amd64: sha256:1c05dbb020c796d1f0f012509c88f355f28a1bec2414c42d89a7950630c391bc
+    '0.17.0':
+      # https://github.com/prometheus/blackbox_exporter/releases/download/v0.17.0/blackbox_exporter-0.17.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:f8895a1d63b8c17431c7647403c60ee72f2b87796b1ca7a2fc32db65cac7b2a6
+      # https://github.com/prometheus/blackbox_exporter/releases/download/v0.17.0/blackbox_exporter-0.17.0.linux-amd64.tar.gz
+      linux-amd64: sha256:6ebe26d1e97d26ee08d0cd6d37a34f2f67c8414ea5e40407eadc0ac950ed518e
+      # https://github.com/prometheus/blackbox_exporter/releases/download/v0.17.0/blackbox_exporter-0.17.0.windows-amd64.tar.gz
+      windows-amd64: sha256:80493a5baaacd236ade4ba593a1f0c9dfd53207518fc8c6b4a5a563af1ca2b59
   consul_exporter:
     '0.4.0':
       darwin-amd64:  sha256:75641783938967c11c18d6d340028ff2dce7ad0ae5e300fa631b813cc6ea9647
@@ -313,3 +327,10 @@ prometheus_installer_checksums:
       linux-amd64: sha256:67b722a51fbaee80800201822aa5dd5bdb51bb5105b4ca22fc4244fa8cfb85da
       # https://github.com/prometheus/statsd_exporter/releases/download/v0.15.0/statsd_exporter-0.15.0.windows-amd64.tar.gz
       windows-amd64: sha256:9b671d5a35dd6e3eb24389845ba82646e0db60e4caf67ca5d27c9d278805c364
+    '0.16.0':
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:4595b98c7d5cda55df2d7f1dbc45a628f5f77947dfce64791189882fadbe48ac
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.linux-amd64.tar.gz
+      linux-amd64: sha256:02ba9020d75c56146cdd6d62fb2891e9660c4108fa827cc04314f748ab6756bc
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.windows-amd64.tar.gz
+      windows-amd64: sha256:3bc83c9c09bdc914e9521a0b5e9e2993d23188f04b6c8f4e567affb1bb02e26d
