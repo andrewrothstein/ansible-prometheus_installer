@@ -7,27 +7,27 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: '2.19.1'
+    version: 2.19.2
   - name: alertmanager
-    version: '0.21.0'
+    version: 0.21.0
   - name: blackbox_exporter
-    version: '0.17.0'
+    version: 0.17.0
   - name: consul_exporter
-    version: '0.7.0'
+    version: 0.7.0
   - name: graphite_exporter
-    version: '0.7.1'
+    version: 0.7.1
   - name: haproxy_exporter
-    version: '0.10.0'
+    version: 0.11.0
   - name: memcached_exporter
-    version: '0.6.0'
+    version: 0.6.0
   - name: mysqld_exporter
-    version: '0.12.1'
+    version: 0.12.1
   - name: node_exporter
-    version: '1.0.1'
+    version: 1.0.1
   - name: pushgateway
-    version: '1.2.0'
+    version: 1.2.0
   - name: statsd_exporter
-    version: '0.16.0'
+    version: 0.17.0
 
 prometheus_installer_checksums:
   prometheus:
@@ -105,6 +105,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:c341566bcf1d645b0561e1296bf18b694a283dd83a304f14a288aa284fc2019a
       # https://github.com/prometheus/prometheus/releases/download/v2.19.1/prometheus-2.19.1.windows-amd64.tar.gz
       windows-amd64: sha256:3b3d785b44f3e9d74b92c561b5b4862c3f99b4ea0291ba9ecf954104f6ec0719
+    '2.19.2':
+      # https://github.com/prometheus/prometheus/releases/download/v2.19.2/prometheus-2.19.2.darwin-amd64.tar.gz
+      darwin-amd64: sha256:b532e1eda72fa3ad0060a9403939e61a6099382e30f85a464d8e261fcd2f11d0
+      # https://github.com/prometheus/prometheus/releases/download/v2.19.2/prometheus-2.19.2.linux-amd64.tar.gz
+      linux-amd64: sha256:68382959f73354b30479f9cc3e779cf80fd2e93010331652700dcc71f6b05586
+      # https://github.com/prometheus/prometheus/releases/download/v2.19.2/prometheus-2.19.2.windows-amd64.tar.gz
+      windows-amd64: sha256:dcaab771331462610d875cf9eca19136f7eabb7f4979c8c447b819d096c1a15f
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -214,6 +221,13 @@ prometheus_installer_checksums:
       darwin-amd64:  sha256:8fdb8bb182586c57e5892816a02846bae0998916765d22bb81b2c444a3565862
       linux-amd64:   sha256:08150728e281f813a8fcfff4b336f16dbfe4268a1c7510212c8cff2579b10468
       windows-amd64: sha256:044118feb98b74eb921e27bd4b511732b553896c672c19bdd3418445dc030794
+    '0.11.0':
+      # https://github.com/prometheus/haproxy_exporter/releases/download/v0.11.0/haproxy_exporter-0.11.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:e74aba54ac95249d0776a103b763c46150fe796cb9574ae98f090bdb7a87283d
+      # https://github.com/prometheus/haproxy_exporter/releases/download/v0.11.0/haproxy_exporter-0.11.0.linux-amd64.tar.gz
+      linux-amd64: sha256:525ec4684b33a7fd1b23fe39e5c378e09cbc52b56fb3e203cffa26e09d22d10d
+      # https://github.com/prometheus/haproxy_exporter/releases/download/v0.11.0/haproxy_exporter-0.11.0.windows-amd64.tar.gz
+      windows-amd64: sha256:8695a332f1134b79cbeb9af2dec4246aabc179a1688511d24d44c6accf9bf521
   memcached_exporter:
     '0.5.0':
       darwin-amd64:  sha256:e10685cca5ffd8a3a7574b3dc096dc7418f34906abd399f881be06dd38be62cb
@@ -334,3 +348,10 @@ prometheus_installer_checksums:
       linux-amd64: sha256:02ba9020d75c56146cdd6d62fb2891e9660c4108fa827cc04314f748ab6756bc
       # https://github.com/prometheus/statsd_exporter/releases/download/v0.16.0/statsd_exporter-0.16.0.windows-amd64.tar.gz
       windows-amd64: sha256:3bc83c9c09bdc914e9521a0b5e9e2993d23188f04b6c8f4e567affb1bb02e26d
+    '0.17.0':
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.17.0/statsd_exporter-0.17.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:d63a3e8cca948431bd1e1c8a5757d9c05dc8036a8e7bf0d77781374da10588f2
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.17.0/statsd_exporter-0.17.0.linux-amd64.tar.gz
+      linux-amd64: sha256:ded16ec4ab337717af35fc9583ce715c275edc5ca86e9f53b6fa38b49bb1d8f1
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.17.0/statsd_exporter-0.17.0.windows-amd64.tar.gz
+      windows-amd64: sha256:6d02a3d8bdfaa47e189003f635fa34da21d39679d39209e72e49deb544886201
