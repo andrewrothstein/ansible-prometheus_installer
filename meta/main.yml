@@ -1,6 +1,6 @@
 dependencies:
 - role: andrewrothstein.unarchive-deps
-  version: v1.1.3
+  version: v1.1.5
 galaxy_info:
   author: Andrew Rothstein
   company: PointState Capital
@@ -19,6 +19,9 @@ galaxy_info:
     versions:
     - 31
     - 32
+  - name: Gentoo
+    versions:
+    - all
   - name: Ubuntu
     versions:
     - bionic
