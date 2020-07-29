@@ -7,19 +7,19 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: 2.19.2
+    version: 2.20.0
   - name: alertmanager
     version: 0.21.0
   - name: blackbox_exporter
     version: 0.17.0
   - name: consul_exporter
-    version: 0.7.0
-  - name: graphite_exporter
     version: 0.7.1
+  - name: graphite_exporter
+    version: 0.9.0
   - name: haproxy_exporter
     version: 0.11.0
   - name: memcached_exporter
-    version: 0.6.0
+    version: 0.7.0
   - name: mysqld_exporter
     version: 0.12.1
   - name: node_exporter
@@ -112,6 +112,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:68382959f73354b30479f9cc3e779cf80fd2e93010331652700dcc71f6b05586
       # https://github.com/prometheus/prometheus/releases/download/v2.19.2/prometheus-2.19.2.windows-amd64.tar.gz
       windows-amd64: sha256:dcaab771331462610d875cf9eca19136f7eabb7f4979c8c447b819d096c1a15f
+    '2.20.0':
+      # https://github.com/prometheus/prometheus/releases/download/v2.20.0/prometheus-2.20.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:1c1f7881bdf1686735c0ad2a5c0f598ce1a54ecb82e5bd5a3aea2f5250265978
+      # https://github.com/prometheus/prometheus/releases/download/v2.20.0/prometheus-2.20.0.linux-amd64.tar.gz
+      linux-amd64: sha256:3c8592717e918edfde4beb59780bfd338a290c0945265bc56d09dba57b06b596
+      # https://github.com/prometheus/prometheus/releases/download/v2.20.0/prometheus-2.20.0.windows-amd64.tar.gz
+      windows-amd64: sha256:cfc6eab2ada0560be99f59d613df576c1941d37a20289c53d60db290d124b875
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -197,6 +204,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:e82ef81d6f90b4a4ab9201adf13e3bcd20898695a158c52e5830577a219ca874
       # https://github.com/prometheus/consul_exporter/releases/download/v0.7.0/consul_exporter-0.7.0.windows-amd64.tar.gz
       windows-amd64: sha256:d417b12794d980cc89a72d4795f70d2b832223579ba2a48a6dc439382e9a1673
+    '0.7.1':
+      # https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.darwin-amd64.tar.gz
+      darwin-amd64: sha256:fe85188cec0445cee79e72456607f781ad964469f5dd59b9ace147f632c391db
+      # https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.linux-amd64.tar.gz
+      linux-amd64: sha256:92ffd37fb5f2350df21e7a688c28e7bb2882c309f613400eafdc411c818ec048
+      # https://github.com/prometheus/consul_exporter/releases/download/v0.7.1/consul_exporter-0.7.1.windows-amd64.tar.gz
+      windows-amd64: sha256:d44cdc430116790eb75bcc6a9f23de8bf0fce37174777dc174e879e9fad0f757
   graphite_exporter:
     '0.6.2':
       darwin-amd64:  sha256:f9c0aa745502c0ab01fdcca29181801810202e0aed512a9aa9a37bb4be88a919
@@ -216,6 +230,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:50827b8d9ab402d3342154986e8b2ae84b03786abe1ff2601190d9caa6ffebe2
       # https://github.com/prometheus/graphite_exporter/releases/download/v0.7.1/graphite_exporter-0.7.1.windows-amd64.tar.gz
       windows-amd64: sha256:9a41403ae786c10e82b85fc57e9beb73b7904befcef9a407cb15bb2d16416e51
+    '0.9.0':
+      # https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:eb15815459d2150ea3c6b4cfc5aeb8093e96c7b40caf12e5e8a2879510b259a4
+      # https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.linux-amd64.tar.gz
+      linux-amd64: sha256:8da5bf07180f345abbd0e3c5ddf0f2bd319d930b6f9dd0385f4cfebdc6815c86
+      # https://github.com/prometheus/graphite_exporter/releases/download/v0.9.0/graphite_exporter-0.9.0.windows-amd64.tar.gz
+      windows-amd64: sha256:5397bcb3f40b4fd494aa7e608cc9733d04b4faed92d5129793129330aaef41ec
   haproxy_exporter:
     '0.10.0':
       darwin-amd64:  sha256:8fdb8bb182586c57e5892816a02846bae0998916765d22bb81b2c444a3565862
@@ -240,6 +261,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:20382d37ca99bbde2661fdbfb43a181f95d68889b761e56b39678e31bb23b64c
       # https://github.com/prometheus/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.windows-amd64.tar.gz
       windows-amd64: sha256:39839071e746f35a64f06dd149f6e4ea5e47f2a5e6f38f9b4b0ae5e82afe94f5
+    '0.7.0':
+      # https://github.com/prometheus/memcached_exporter/releases/download/v0.7.0/memcached_exporter-0.7.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:15045bff1892d8ac566a7a322a0ab200fe6ceb4f7aabca9a5f763f7a4507530d
+      # https://github.com/prometheus/memcached_exporter/releases/download/v0.7.0/memcached_exporter-0.7.0.linux-amd64.tar.gz
+      linux-amd64: sha256:a8dec3f2493330159b02ab5f8916726d2d41d70170f23206b1987cdb450a839b
+      # https://github.com/prometheus/memcached_exporter/releases/download/v0.7.0/memcached_exporter-0.7.0.windows-amd64.tar.gz
+      windows-amd64: sha256:556406018fcde90d115601f9f49b5f8ccff0a65eeab33c539fd1d76ef24c653a
   mysqld_exporter:
     '0.11.0':
       darwin-amd64:  sha256:8e0a7d8847790d6dcdcf392e6dd227458a7bcaa1e0890cc6326fdf956421f2a7
