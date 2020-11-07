@@ -36,14 +36,14 @@ dlapp()
     done
 }
 
-dlapp prometheus 2.22.0
+dlapp prometheus 2.22.1
 #dlapp alertmanager 0.21.0
-dlapp blackbox_exporter 0.18.0
+#dlapp blackbox_exporter 0.18.0
 #dlapp consul_exporter 0.7.1
 #dlapp graphite_exporter 0.9.0
 #dlapp haproxy_exporter 0.11.0
 #dlapp memcached_exporter 0.7.0
 #dlapp mysqld_exporter 0.12.1
 #dlapp node_exporter 1.0.1
-dlapp pushgateway 1.3.0
+#dlapp pushgateway 1.3.0
 #dlapp statsd_exporter 0.18.0

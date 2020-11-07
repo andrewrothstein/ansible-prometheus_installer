@@ -7,7 +7,7 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: 2.22.0
+    version: 2.22.1
   - name: alertmanager
     version: 0.21.0
   - name: blackbox_exporter
@@ -140,6 +140,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:b9894d2bf7fae235c924c7dadda0fbc214ffc18a2bb3e9306f6fbecb589d5263
       # https://github.com/prometheus/prometheus/releases/download/v2.22.0/prometheus-2.22.0.windows-amd64.tar.gz
       windows-amd64: sha256:234b86f57d0caae4645e2252c7265b39c523b0af24ce64f7bf7c1ba0f347da34
+    '2.22.1':
+      # https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.darwin-amd64.tar.gz
+      darwin-amd64: sha256:924d2fd7804e2f3181ad60be61c3edd8b674ab34cd4d14fc71e7b00a64e3a727
+      # https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.linux-amd64.tar.gz
+      linux-amd64: sha256:9001a9cb939e0a6d9f2b67d22506c620bc9457777272fced43274b032ba35f44
+      # https://github.com/prometheus/prometheus/releases/download/v2.22.1/prometheus-2.22.1.windows-amd64.tar.gz
+      windows-amd64: sha256:ef6b4983b5c44ab31823fa9dc392135c1bb2c49e271ac282a458368ef6cbf55b
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
