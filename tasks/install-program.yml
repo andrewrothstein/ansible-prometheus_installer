@@ -3,7 +3,7 @@
   include_vars:
     file: install-vars.yml
 
-- name: check for installation of {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }}
+- name: checking for installation of {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} in  {{ prometheus_installer_dir }}
   become: root
   stat:
     path: '{{ prometheus_installer_dir }}'
@@ -12,12 +12,12 @@
 
 - when: not prometheus_installer_binary.stat.exists
   block:
-    - name: downloading {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }}
+    - name: downloading {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} from {{ prometheus_installer_tgz_url }}
       become: yes
       become_user: root
       get_url:
         url: '{{ prometheus_installer_tgz_url }}'
-        dest: /tmp/{{ prometheus_installer_tgz }}
+        dest: '{{ prometheus_installer_tmp_tgz }}'
         checksum: '{{ prometheus_installer_checksum }}'
         mode: 0644
 
@@ -26,18 +26,18 @@
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ prometheus_installer_tgz }}
+        src: '{{ prometheus_installer_tmp_tgz }}'
         dest: '{{ prometheus_installer_parent_dir }}'
         creates: '{{ prometheus_installer_dir }}'
   always:
-    - name: deleting archive for {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }}
+    - name: rm {{ prometheus_installer_tmp_tgz }}
       become: yes
       become_user: root
       file:
-        path: /tmp/{{ prometheus_installer_tgz }}
+        path: '{{ prometheus_installer_tmp_tgz }}'
         state: absent
 
-- name: linking {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }}
+- name: linking {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} from {{ prometheus_installer_link_dir }} to {{ prometheus_installer_dir }}
   become: yes
   become_user: root
   file:

@@ -3,6 +3,7 @@
 prometheus_installer_name: '{{ prometheus_installer_app.name }}-{{ prometheus_installer_app.version }}.{{ prometheus_installer_platform }}'
 
 prometheus_installer_tgz: '{{ prometheus_installer_name }}.tar.gz'
+prometheus_installer_tmp_tgz: /tmp/{{ prometheus_installer_tgz }}
 prometheus_installer_tgz_url: '{{ prometheus_installer_mirror }}/{{ prometheus_installer_app.name }}/releases/download/v{{ prometheus_installer_app.version }}/{{ prometheus_installer_tgz }}'
 prometheus_installer_checksum: '{{ prometheus_installer_checksums[prometheus_installer_app.name][prometheus_installer_app.version][prometheus_installer_platform] }}'
 
