@@ -37,12 +37,21 @@
         path: '{{ prometheus_installer_tmp_tgz }}'
         state: absent
 
-- name: linking {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} from {{ prometheus_installer_link_dir }} to {{ prometheus_installer_dir }}
+- name: linking subdirectories of {{ prometheus_installer_parent_dir }} to {{ prometheus_installer_dir }} 
+  become: yes
+  become_user: root
+  with_items: '{{ prometheus_installer_link_dirs }}'
+  file:
+    src: '{{ prometheus_installer_dir }}'
+    dest: '{{ item }}'
+    state: link
+
+- name: linking {{ prometheus_installer_link_exe }} to {{ prometheus_installer_fq_exe }}...
   become: yes
   become_user: root
   file:
-    src: '{{ prometheus_installer_dir }}'
-    dest: '{{ prometheus_installer_link_dir }}'
+    src: '{{ prometheus_installer_fq_exe }}'
+    dest: '{{ prometheus_installer_link_exe }}'
     state: link
 
 - name: adding {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} to default path...
