@@ -41,7 +41,7 @@ dlapp()
     done
 }
 
-dlapp prometheus prometheus 2.24.1
+dlapp prometheus prometheus 2.25.0
 #dlapp prometheus alertmanager 0.21.0
 #dlapp prometheus blackbox_exporter 0.18.0
 #dlapp prometheus consul_exporter 0.7.1

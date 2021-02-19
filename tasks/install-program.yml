@@ -4,7 +4,8 @@
     file: install-vars.yml
 
 - name: checking for installation of {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} in  {{ prometheus_installer_dir }}
-  become: root
+  become: yes
+  become_user: root
   stat:
     path: '{{ prometheus_installer_dir }}'
   changed_when: false
