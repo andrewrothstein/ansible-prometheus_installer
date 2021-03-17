@@ -40,7 +40,7 @@ dlapp()
     done
 }
 
-dlapp prometheus prometheus 2.25.1
+dlapp prometheus prometheus 2.25.2
 #dlapp prometheus alertmanager 0.21.0
 #dlapp prometheus blackbox_exporter 0.18.0
 #dlapp prometheus consul_exporter 0.7.1
@@ -48,7 +48,7 @@ dlapp prometheus prometheus 2.25.1
 #dlapp prometheus haproxy_exporter 0.12.0
 #dlapp prometheus memcached_exporter 0.8.0
 #dlapp prometheus mysqld_exporter 0.12.1
-dlapp prometheus node_exporter 1.1.2
-dlapp prometheus pushgateway 1.4.0
-dlapp prometheus statsd_exporter 0.20.0
-dlapp prometheus-community bind_exporter 0.4.0
+#dlapp prometheus node_exporter 1.1.2
+#dlapp prometheus pushgateway 1.4.0
+#dlapp prometheus statsd_exporter 0.20.0
+#dlapp prometheus-community bind_exporter 0.4.0
