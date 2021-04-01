@@ -7,7 +7,7 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: 2.25.2
+    version: 2.26.0
   - name: alertmanager
     version: 0.21.0
   - name: blackbox_exporter
@@ -19,7 +19,7 @@ prometheus_installer_versions:
   - name: haproxy_exporter
     version: 0.12.0
   - name: memcached_exporter
-    version: 0.8.0
+    version: 0.9.0
   - name: mysqld_exporter
     version: 0.12.1
   - name: node_exporter
@@ -27,7 +27,7 @@ prometheus_installer_versions:
   - name: pushgateway
     version: 1.4.0
   - name: statsd_exporter
-    version: 0.20.0
+    version: 0.20.1
   - name: bind_exporter
     ghuser: prometheus-community
     version: 0.4.0
@@ -199,6 +199,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:362804a065949bfb03d31783e6522a4d874c40f507a64add6455f95e6c7de33e
       # https://github.com/prometheus/prometheus/releases/download/v2.25.2/prometheus-2.25.2.windows-amd64.tar.gz
       windows-amd64: sha256:f4d4a2e460b97f9d7a7f4f6d7ad54a8f9ca1595520c215c383ab90568a65aeb2
+    '2.26.0':
+      # https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:2c6eb33d3d02a8f01e16900121e54e67a427ccfb6fa5a9a712771e6b79c2a466
+      # https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
+      linux-amd64: sha256:8dd6786c338dc62728e8891c13b62eda66c7f28a01398869f2b3712895b441b9
+      # https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.windows-amd64.tar.gz
+      windows-amd64: sha256:4e75dc7d72b3006bc718bb2e89930cae058f5f4642a5b75ac9daa565a0a7272e
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -369,6 +376,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:0a666f41d733ebdc20cf2dc66fbb0c2899afc237002db67b7a31ff7f9f7dde3f
       # https://github.com/prometheus/memcached_exporter/releases/download/v0.8.0/memcached_exporter-0.8.0.windows-amd64.tar.gz
       windows-amd64: sha256:153d73efc67fee2e1008f0afa32836eec6253903b93baaafc411165fbcdbc008
+    '0.9.0':
+      # https://github.com/prometheus/memcached_exporter/releases/download/v0.9.0/memcached_exporter-0.9.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:a5b4fe2c69e5599b0755c3f0b415549b035cc109c18b690adbb6d010f7f8f211
+      # https://github.com/prometheus/memcached_exporter/releases/download/v0.9.0/memcached_exporter-0.9.0.linux-amd64.tar.gz
+      linux-amd64: sha256:831c59a131ca6229feff900ddb08e4337c1adaee5e91e2d6545b77166e4469a5
+      # https://github.com/prometheus/memcached_exporter/releases/download/v0.9.0/memcached_exporter-0.9.0.windows-amd64.tar.gz
+      windows-amd64: sha256:503d784a8757247eca6fe8210bc39e035596a74fd0b1e2d3bec67b75283cb16e
   mysqld_exporter:
     '0.11.0':
       darwin-amd64:  sha256:8e0a7d8847790d6dcdcf392e6dd227458a7bcaa1e0890cc6326fdf956421f2a7
@@ -524,6 +538,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:9a3686fe040b60984c1d21dd3e6826f51abdaeeee7a6c3a57a0b33cbe96a14d5
       # https://github.com/prometheus/statsd_exporter/releases/download/v0.20.0/statsd_exporter-0.20.0.windows-amd64.tar.gz
       windows-amd64: sha256:4e05c27da6d443bc6cad032eb9a2167ae6f476296904a681f48ba1b6526b4565
+    '0.20.1':
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.20.1/statsd_exporter-0.20.1.darwin-amd64.tar.gz
+      darwin-amd64: sha256:4528acc77b7fd1a818cc1e06002d67a2337144a01ccd8b2e609a1c1c201d5389
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.20.1/statsd_exporter-0.20.1.linux-amd64.tar.gz
+      linux-amd64: sha256:5df798df2c4c49e9c14b22e79c9efbce5dc5c489f297e0a35ddff342e1a8a339
+      # https://github.com/prometheus/statsd_exporter/releases/download/v0.20.1/statsd_exporter-0.20.1.windows-amd64.tar.gz
+      windows-amd64: sha256:8dfe748aeebeac599a30d53b9d7e234d94836a8ec46e5059dcaa396343459269
   bind_exporter:
     '0.3.0':
       # https://github.com/prometheus-community/bind_exporter/releases/download/v0.3.0/bind_exporter-0.3.0.darwin-amd64.tar.gz
