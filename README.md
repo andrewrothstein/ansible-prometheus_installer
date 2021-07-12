@@ -1,6 +1,6 @@
 andrewrothstein.prometheus-installer
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-prometheus-installer.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-prometheus-installer)
+![Build Status](https://github.com/andrewrothstein/ansible-prometheus-installer/actions/workflows/build.yml/badge.svg)
 
 A base role for installing [Prometheus](https://prometheus.io/download/) related apps.
 
