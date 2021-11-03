@@ -7,7 +7,7 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: 2.30.2
+    version: 2.31.0
   - name: alertmanager
     version: 0.23.0
   - name: blackbox_exporter
@@ -25,7 +25,7 @@ prometheus_installer_versions:
   - name: node_exporter
     version: 1.2.2
   - name: pushgateway
-    version: 1.4.1
+    version: 1.4.2
   - name: statsd_exporter
     version: 0.22.2
   - name: bind_exporter
@@ -255,6 +255,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:1f5c239f6fa8da511ae140eea8d3190c1a6e0093247d758d81c99d63684ae1e1
       # https://github.com/prometheus/prometheus/releases/download/v2.30.2/prometheus-2.30.2.windows-amd64.tar.gz
       windows-amd64: sha256:0cfb95bd907c49c10a9015d0eb6939c2a9f31168281232e693c5852147365142
+    '2.31.0':
+      # https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:af0b4c4a5156c4f08ea31456bb3d67c7b1c959eaa73d26a9fd98a5bfbbda6b82
+      # https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.linux-amd64.tar.gz
+      linux-amd64: sha256:cd92e35b356d35cbe44f32f54ca9a7687c885f4367587ac208a1803ed16572aa
+      # https://github.com/prometheus/prometheus/releases/download/v2.31.0/prometheus-2.31.0.windows-amd64.tar.gz
+      windows-amd64: sha256:c3c7148efe95b7e94e493a38abd7d31cbcb93e033f8c9aea17cdf130c62f1d37
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -580,6 +587,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:593e17b1064d642cf737d1c46db5e492f5c71aa30449e88374a7a54e04d26490
       # https://github.com/prometheus/pushgateway/releases/download/v1.4.1/pushgateway-1.4.1.windows-amd64.tar.gz
       windows-amd64: sha256:6a3940eec15d462b86a5555afb653a24d97c66cbb1d36f87d026df1ac61c46e7
+    '1.4.2':
+      # https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.darwin-amd64.tar.gz
+      darwin-amd64: sha256:fcc1638c37637f65488b55aeffc24bfc4c0569d780f3ddda8585dd0375898870
+      # https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.linux-amd64.tar.gz
+      linux-amd64: sha256:d41df97d93a7564bf8207a8884452eb220d2124d3853682c879907c96b525a6f
+      # https://github.com/prometheus/pushgateway/releases/download/v1.4.2/pushgateway-1.4.2.windows-amd64.tar.gz
+      windows-amd64: sha256:327c629e736d4b667d771e08b74e10e9e98c842e6ecdb36b9d8506a588ce2dc5
   statsd_exporter:
     '0.10.5':
       darwin-amd64:  sha256:b01ae33abacff6df17de1f3f110b1aa400e4ac148e437b62b639fd4c640e25bd
