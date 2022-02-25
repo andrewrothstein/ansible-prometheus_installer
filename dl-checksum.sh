@@ -40,10 +40,12 @@ dlapp()
     done
 }
 
-dlapp prometheus prometheus 2.32.1
+# https://prometheus.io/download/
+
+dlapp prometheus prometheus 2.33.4
 #dlapp prometheus alertmanager 0.23.0
 #dlapp prometheus blackbox_exporter 0.19.0
-#dlapp prometheus consul_exporter 0.7.1
+dlapp prometheus consul_exporter 0.8.0
 #dlapp prometheus graphite_exporter 0.12.0
 #dlapp prometheus haproxy_exporter 0.13.0
 #dlapp prometheus memcached_exporter 0.9.0
