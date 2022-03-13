@@ -7,7 +7,7 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: 2.33.4
+    version: 2.33.5
   - name: alertmanager
     version: 0.23.0
   - name: blackbox_exporter
@@ -21,7 +21,7 @@ prometheus_installer_versions:
   - name: memcached_exporter
     version: 0.9.0
   - name: mysqld_exporter
-    version: 0.13.0
+    version: 0.14.0
   - name: node_exporter
     version: 1.3.1
   - name: pushgateway
@@ -283,6 +283,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:18aea1c8e6833fe01423000139a4778780542f3bbafe3d5b97437704aa15b130
       # https://github.com/prometheus/prometheus/releases/download/v2.33.4/prometheus-2.33.4.windows-amd64.tar.gz
       windows-amd64: sha256:6cbc19f264b4762fd59ecf83065f53809b87d3adc69119a707f1b7c1f61260d5
+    '2.33.5':
+      # https://github.com/prometheus/prometheus/releases/download/v2.33.5/prometheus-2.33.5.darwin-amd64.tar.gz
+      darwin-amd64: sha256:a3976e7e92f47aa630b89ddaf66e6c984783bd0f22416ddc9b1f49b64408438e
+      # https://github.com/prometheus/prometheus/releases/download/v2.33.5/prometheus-2.33.5.linux-amd64.tar.gz
+      linux-amd64: sha256:53876d18d4ed2d02a35797d91b09e9057621b495415703be77dd29956002514d
+      # https://github.com/prometheus/prometheus/releases/download/v2.33.5/prometheus-2.33.5.windows-amd64.tar.gz
+      windows-amd64: sha256:58f7974daffa75b1a85dc7a7d9995e718b7731d63f68bf72d6479b31118a1db6
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -549,6 +556,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:626584c5d1c0cf09982302763e69db24fabe5dc736e7b694a3f8fdfee3d8d9a2
       # https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0/mysqld_exporter-0.13.0.windows-amd64.tar.gz
       windows-amd64: sha256:5fa4be64acf7d1bfb672b750047940aa8352b2a12adb16b67db0b826430c2485
+    '0.14.0':
+      # https://github.com/prometheus/mysqld_exporter/releases/download/v0.14.0/mysqld_exporter-0.14.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:9df18d55d6f42750afef7f75e18374e590a991b01575f147ad7919ffe1edbbfe
+      # https://github.com/prometheus/mysqld_exporter/releases/download/v0.14.0/mysqld_exporter-0.14.0.linux-amd64.tar.gz
+      linux-amd64: sha256:c17402137a4e9745f593127f162c1003298910cb8aa7d05bee3384738de094ae
+      # https://github.com/prometheus/mysqld_exporter/releases/download/v0.14.0/mysqld_exporter-0.14.0.windows-amd64.tar.gz
+      windows-amd64: sha256:318a3236bb8b049fde0ed1f923b84bf22b5c88da7700f1167e0f8e20d7bd008d
   node_exporter:
     '0.18.1':
       darwin-amd64: sha256:20fadb3108de0a9cc70a1333394e5be90416b4f91025f9fc66f5736335e94398
