@@ -7,9 +7,9 @@ prometheus_installer_platform: linux-amd64
 
 prometheus_installer_versions:
   - name: prometheus
-    version: 2.34.0
+    version: 2.35.0
   - name: alertmanager
-    version: 0.23.0
+    version: 0.24.0
   - name: blackbox_exporter
     version: 0.20.0
   - name: consul_exporter
@@ -297,6 +297,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:9ec560940bf53361dd9d3a867d51ceb96f3854ae12f5e532b7d3f60c27f364d0
       # https://github.com/prometheus/prometheus/releases/download/v2.34.0/prometheus-2.34.0.windows-amd64.tar.gz
       windows-amd64: sha256:ed8f47bb94ef6ade68c2bc38dbc41367a5e4943036f3737047fb821edbc141c7
+    '2.35.0':
+      # https://github.com/prometheus/prometheus/releases/download/v2.35.0/prometheus-2.35.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:a4f4d0ea38addc179bd37a0282738a8b03a6e58ae3706f09be3178e883c44abc
+      # https://github.com/prometheus/prometheus/releases/download/v2.35.0/prometheus-2.35.0.linux-amd64.tar.gz
+      linux-amd64: sha256:e4546960688d1c85530ec3a93e109d15b540f3251e1f4736d0d9735e1e857faf
+      # https://github.com/prometheus/prometheus/releases/download/v2.35.0/prometheus-2.35.0.windows-amd64.tar.gz
+      windows-amd64: sha256:90702350179e041d0164d5df860000a60acc9196beedfc5c3f68275a94f2576d
   alertmanager:
     '0.17.0':
       darwin-amd64:  sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -351,6 +358,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:77793c4d9bb92be98f7525f8bc50cb8adb8c5de2e944d5500e90ab13918771fc
       # https://github.com/prometheus/alertmanager/releases/download/v0.23.0/alertmanager-0.23.0.windows-amd64.tar.gz
       windows-amd64: sha256:7832aac30f849de0a1a60d961dec083e97933a73dc26673ffaef4809719fcd3c
+    '0.24.0':
+      # https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:a726fa727b6d8e422665a93f90c85b8bca15e2821594288944e21cbe340c68f1
+      # https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.linux-amd64.tar.gz
+      linux-amd64: sha256:6fa982232ae7be5524f5b3cd4e90b7c6a75086368200c917644eaa3e806555dc
+      # https://github.com/prometheus/alertmanager/releases/download/v0.24.0/alertmanager-0.24.0.windows-amd64.tar.gz
+      windows-amd64: sha256:e73c1c93cca44bd7ca51f43737a6d55cd0d3bb9f2f982a9442bc02c143a1faaa
   blackbox_exporter:
     '0.14.0':
       darwin-amd64:  sha256:a371d0496adb5d62368d6606928c5effd318d1387f6b9a9998f8d0333492645a
