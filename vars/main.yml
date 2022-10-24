@@ -1,0 +1,4 @@
+---
+prometheus_installer_os: '{{ ansible_system | lower }}'
+prometheus_installer_arch: '{{ prometheus_installer_arch_map[ansible_architecture] }}'
+prometheus_installer_platform: '{{ prometheus_installer_os }}-{{ prometheus_installer_arch }}'

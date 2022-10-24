@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: looping over programs to install...
   loop: '{{ prometheus_installer_versions }}'
   loop_control:
