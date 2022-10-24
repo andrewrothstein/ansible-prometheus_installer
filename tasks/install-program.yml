@@ -4,7 +4,7 @@
     file: install-vars.yml
 
 - name: checking for installation of {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} in  {{ prometheus_installer_dir }}
-  become: yes
+  become: true
   become_user: root
   stat:
     path: '{{ prometheus_installer_dir }}'
@@ -14,7 +14,7 @@
 - when: not prometheus_installer_binary.stat.exists
   block:
     - name: downloading {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} from {{ prometheus_installer_tgz_url }}
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ prometheus_installer_tgz_url }}'
@@ -23,23 +23,23 @@
         mode: 0644
 
     - name: unarchiving {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ prometheus_installer_tmp_tgz }}'
         dest: '{{ prometheus_installer_parent_dir }}'
         creates: '{{ prometheus_installer_dir }}'
   always:
     - name: rm {{ prometheus_installer_tmp_tgz }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ prometheus_installer_tmp_tgz }}'
         state: absent
 
-- name: linking subdirectories of {{ prometheus_installer_parent_dir }} to {{ prometheus_installer_dir }} 
-  become: yes
+- name: linking subdirectories of {{ prometheus_installer_parent_dir }} to {{ prometheus_installer_dir }}
+  become: true
   become_user: root
   with_items: '{{ prometheus_installer_link_dirs }}'
   file:
@@ -48,7 +48,7 @@
     state: link
 
 - name: linking {{ prometheus_installer_link_exe }} to {{ prometheus_installer_fq_exe }}...
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ prometheus_installer_fq_exe }}'
@@ -56,7 +56,7 @@
     state: link
 
 - name: adding {{ prometheus_installer_app.name }} v{{ prometheus_installer_app.version }} to default path...
-  become: yes
+  become: true
   become_user: root
   template:
     src: shell.j2
