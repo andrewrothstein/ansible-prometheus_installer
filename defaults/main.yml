@@ -10,7 +10,7 @@ prometheus_installer_arch_map:
 
 prometheus_installer_versions:
   - name: prometheus
-    version: 2.39.1
+    version: 2.40.2
   - name: alertmanager
     version: 0.24.0
   - name: blackbox_exporter
@@ -27,13 +27,15 @@ prometheus_installer_versions:
     version: 0.14.0
   - name: node_exporter
     version: 1.4.0
+  - name: promlens
+    version: 0.2.0
   - name: pushgateway
     version: 1.4.3
   - name: statsd_exporter
     version: 0.22.8
   - name: bind_exporter
     ghuser: prometheus-community
-    version: 0.5.0
+    version: 0.6.0
 
 prometheus_installer_checksums:
   prometheus:
@@ -335,6 +337,13 @@ prometheus_installer_checksums:
       linux-amd64: sha256:f3bdaa6f49b10af213a595e5d233579a1205a425fcebe2e23379e486f27a63c6
       # https://github.com/prometheus/prometheus/releases/download/v2.39.1/prometheus-2.39.1.windows-amd64.tar.gz
       windows-amd64: sha256:4a0e66d73e23d10799fc570bfeccaebb3922dfcd6b95eb411eb37a7329b5cb2f
+    '2.40.2':
+      # https://github.com/prometheus/prometheus/releases/download/v2.40.2/prometheus-2.40.2.darwin-amd64.tar.gz
+      darwin-amd64: sha256:c98ef13e840197b2a30bc31a4c3ec1186c16a103fef91e3e7f3a3b90761e2823
+      # https://github.com/prometheus/prometheus/releases/download/v2.40.2/prometheus-2.40.2.linux-amd64.tar.gz
+      linux-amd64: sha256:916db16d9236366dcc48aca4d738b9d9ed89ce82c0ab91632b9ea78bf745c5ed
+      # https://github.com/prometheus/prometheus/releases/download/v2.40.2/prometheus-2.40.2.windows-amd64.tar.gz
+      windows-amd64: sha256:5ca87d5b4722ffbe2dc6c1b4be5b6c72b8e8471d21a6e82072426b9893130fee
   alertmanager:
     '0.17.0':
       darwin-amd64: sha256:efeebaa8e51c521ecb3440345fb65962533cae022d71dff8b127911e893ded2a
@@ -700,6 +709,14 @@ prometheus_installer_checksums:
       darwin-amd64: sha256:4242efbc46db559c7c3279e2a78f06ac60fc0b3092f2e39ab5caed7175210600
       # https://github.com/prometheus/node_exporter/releases/download/v1.4.0/node_exporter-1.4.0.linux-amd64.tar.gz
       linux-amd64: sha256:e77ff1b0a824a4e13f82a35d98595fe526849c09e3480d0789a56b72242d2abc
+  promlens:
+    '0.2.0':
+      # https://github.com/prometheus/promlens/releases/download/v0.2.0/promlens-0.2.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:034a2e8a6218a59f912b622588614ca100c65f71c5c61d25dab6d308d7f9fa7d
+      # https://github.com/prometheus/promlens/releases/download/v0.2.0/promlens-0.2.0.linux-amd64.tar.gz
+      linux-amd64: sha256:ba257aee2423f67804a68216fe1576481d874b62f0185ff022ef0c0dfd1c1092
+      # https://github.com/prometheus/promlens/releases/download/v0.2.0/promlens-0.2.0.windows-amd64.tar.gz
+      windows-amd64: sha256:a7f923a3db45cc21d30e386a3b52590b5350b07d219fd42e7072737ea5e1af1c
   pushgateway:
     '0.8.0':
       darwin-amd64: sha256:25399a4c6600c1931f9d9bd5294700c2b53f964188b1c6003f9d12a2e176aac1
@@ -921,3 +938,10 @@ prometheus_installer_checksums:
       linux-amd64: sha256:c1279ada69396b52f75be4b7233f6310c26785951326485402072bb3e3a94a5b
       # https://github.com/prometheus-community/bind_exporter/releases/download/v0.5.0/bind_exporter-0.5.0.windows-amd64.tar.gz
       windows-amd64: sha256:0c5380fd97fafcefc1a5a5c7fa567d4cee4d848a160523a1b345a5fb88354abc
+    '0.6.0':
+      # https://github.com/prometheus-community/bind_exporter/releases/download/v0.6.0/bind_exporter-0.6.0.darwin-amd64.tar.gz
+      darwin-amd64: sha256:6f5964f79a494f581008f168645916f5bc50c9105b82c8f2025d338a0e0a3cea
+      # https://github.com/prometheus-community/bind_exporter/releases/download/v0.6.0/bind_exporter-0.6.0.linux-amd64.tar.gz
+      linux-amd64: sha256:f825bab5fc1c3f90ab2fe9aa0653fa8784ba9974f3c5c8f758bf2a5d194e122a
+      # https://github.com/prometheus-community/bind_exporter/releases/download/v0.6.0/bind_exporter-0.6.0.windows-amd64.tar.gz
+      windows-amd64: sha256:9152906ed30b2d92bcc6d09a2b256c4c8cd0c7ecad2e9c4fa5396e998c496bf8
