@@ -43,8 +43,8 @@ dlapp()
 # https://prometheus.io/download/
 # https://github.com/prometheus-community/bind_exporter/releases
 
-##dlapp prometheus prometheus 2.41.0
-##dlapp prometheus alertmanager 0.24.0
+dlapp prometheus prometheus 2.42.0
+dlapp prometheus alertmanager 0.25.0
 ##dlapp prometheus blackbox_exporter 0.23.0
 ##dlapp prometheus consul_exporter 0.9.0
 ##dlapp prometheus graphite_exporter 0.13.1
