@@ -43,16 +43,16 @@ dlapp()
 # https://prometheus.io/download/
 # https://github.com/prometheus-community/bind_exporter/releases
 
-dlapp prometheus prometheus 2.43.0
-##dlapp prometheus alertmanager 0.25.0
-##dlapp prometheus blackbox_exporter 0.23.0
-##dlapp prometheus consul_exporter 0.9.0
-dlapp prometheus graphite_exporter 0.13.3
+#dlapp prometheus prometheus 2.49.1
+#dlapp prometheus alertmanager 0.26.0
+#dlapp prometheus blackbox_exporter 0.24.0
+#dlapp prometheus consul_exporter 0.11.0
+#dlapp prometheus graphite_exporter 0.15.0
 ##dlapp prometheus haproxy_exporter 0.14.0
-dlapp prometheus memcached_exporter 0.11.2
-##dlapp prometheus mysqld_exporter 0.14.0
-##dlapp prometheus node_exporter 1.5.0
+#dlapp prometheus memcached_exporter 0.14.2
+#dlapp prometheus mysqld_exporter 0.15.1
+#dlapp prometheus node_exporter 1.7.0
 ##dlapp prometheus promlens 0.3.0
-##dlapp prometheus pushgateway 1.5.1
-dlapp prometheus statsd_exporter 0.23.1
-dlapp prometheus-community bind_exporter 0.6.1
+#dlapp prometheus pushgateway 1.7.0
+#dlapp prometheus statsd_exporter 0.26.0
+#dlapp prometheus-community bind_exporter 0.7.0
